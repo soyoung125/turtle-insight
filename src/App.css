@@ -1,42 +1,48 @@
 #root {
-  max-width: 1280px;
+  width: 100vw;
+  height: 100vh;
+  word-break: keep-all;
+  background-image: url(/src/assets/background_blue.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
   margin: 0 auto;
-  padding: 2rem;
+  max-width: 1280px;
+  padding: 1rem;
   text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  padding: 1rem;
+  max-width: 70px;
+  min-width: 35px;
+  width: 10%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.roundedCard {
+  border-radius: 30px;
+  border: 5px solid #FFF;
+  background: rgba(255, 255, 255, 0.51);
+  padding: 1rem 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.logo_cocktail {
+  max-width: 100%;
 }
 
-.card {
-  padding: 2em;
+.start_button {
+  width: 100%;
+  max-width: 255px;
+  border-radius: 10px;
+  background: #FAEFC9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.read-the-docs {
-  color: #888;
+.menu_button {
+  width: 100%;
+  border-radius: 30px;
+  border: 5px solid #FFF;
+  background: rgba(255, 255, 255, 0.51);
 }

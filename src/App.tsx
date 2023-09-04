@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import logo from '../src/assets/logo_white.png'
+import cocktail from '../src/assets/cocktail_white.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="" target="_blank">
+          <img src={logo} className="logo" alt="turtleinsight logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className="container">
+        <div className="roundedCard">
+          <h2>MBTI 밸런스 게임 칵테일편</h2>
+          <div>
+            <img src={cocktail} className="logo_cocktail" alt="cocktail logo" />
+          </div>
+          <button className="start_button" onClick={() => alert('start!')}>start</button>
+        </div>
+        <br />
+        <button className="menu_button" onClick={() => alert('메뉴 준비중...')}>
+          칵테일MENU 보러가기🔖🧾 
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
