@@ -1,7 +1,7 @@
 #root {
   width: 100vw;
   height: 100vh;
-  word-break: break-all;
+  word-break: keep-all;
   background-image: url(/src/assets/background_blue.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,4 +12,37 @@
   max-width: 1280px;
   padding: 1rem;
   text-align: center;
+}
+
+.logo {
+  padding: 1rem;
+  max-width: 70px;
+  min-width: 35px;
+  width: 10%;
+}
+
+.roundedCard {
+  border-radius: 30px;
+  border: 5px solid #FFF;
+  background: rgba(255, 255, 255, 0.51);
+  padding: 1rem 2rem;
+}
+
+.logo_cocktail {
+  max-width: 100%;
+}
+
+.start_button {
+  width: 100%;
+  max-width: 255px;
+  border-radius: 10px;
+  background: #FAEFC9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.menu_button {
+  width: 100%;
+  border-radius: 30px;
+  border: 5px solid #FFF;
+  background: rgba(255, 255, 255, 0.51);
 }
