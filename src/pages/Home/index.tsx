@@ -1,7 +1,10 @@
 import cocktail from '../../assets/cocktail_white.png'
 import '../../App.css'
+import { useNavigate } from 'react-router-dom';
+import PATH from '../../domain/constants/path';
 
 function Home() {
+    const navigate = useNavigate();
     return (
         <>
             <div className="roundedCard">
@@ -9,10 +12,10 @@ function Home() {
                 <div>
                     <img src={cocktail} className="logo_cocktail" alt="cocktail logo" />
                 </div>
-                <button className="start_button" onClick={() => alert('start!')}>start</button>
+                <button className="start_button" onClick={() => navigate(PATH.test)}>start</button>
             </div>
             <br />
-            <button className="menu_button" onClick={() => alert('메뉴 준비중...')}>
+            <button className="menu_button" onClick={() => navigate(PATH.menu)}>
                 칵테일MENU 보러가기🔖🧾
             </button>
         </>
