@@ -1,11 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo_white.png'
+import PATH from '../../domain/constants/path';
 
 function Topbar() {
+    const navigate = useNavigate();
     return (
-        <div>
-            <a href="/" target="_blank">
-                <img src={logo} className="logo" alt="turtleinsight logo" />
-            </a>
+        <div onClick={() => navigate(PATH.home)}>
+            <img src={logo} className="logo" alt="turtleinsight logo" />
         </div>
     );
 }
