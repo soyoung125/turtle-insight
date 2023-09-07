@@ -1,11 +1,12 @@
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import HOME_ROUTES from "./routes/HOME_ROUTES";
+import HomeLayout from "../components/layouts/HomeLayout";
 
 const router = createBrowserRouter(
     [
       {
         path: "/",
-        element: <><div>topbar</div><div><Outlet /></div></>,
+        element: <HomeLayout />,
         children: [
           {
             path: "/",
