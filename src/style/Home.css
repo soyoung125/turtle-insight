@@ -1,0 +1,22 @@
+#root {
+    width: 100vw;
+    height: 100vh;
+    word-break: keep-all;
+    background-image: url(/src/assets/background_blue.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 512px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo {
+    padding: 1rem;
+    max-width: 70px;
+    min-width: 35px;
+    width: 10%;
+}
