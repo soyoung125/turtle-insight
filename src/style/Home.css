@@ -5,6 +5,7 @@
     background-image: url(/src/assets/background_blue.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'MaruBuri';
 }
 
 .container {

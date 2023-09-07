@@ -8,7 +8,7 @@ function Home() {
     return (
         <>
             <div className="roundedCard">
-                <h2>MBTI 밸런스 게임 칵테일편</h2>
+                <div className="title">MBTI 밸런스 게임<div>-칵테일편-</div></div>
                 <div>
                     <img src={cocktail} className="logo_cocktail" alt="cocktail logo" />
                 </div>
@@ -16,7 +16,7 @@ function Home() {
             </div>
             <br />
             <button className="menu_button" onClick={() => navigate(PATH.menu)}>
-                칵테일MENU 보러가기🔖🧾
+                칵테일MENU 보러가기🧾
             </button>
         </>
     );
