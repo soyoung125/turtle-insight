@@ -1,22 +1,26 @@
 import PATH from "../../domain/constants/path";
+import Home from "../../pages/Home";
+import Menu from "../../pages/Menu";
+import Result from "../../pages/Result";
+import Test from "../../pages/Test";
 import { RouterDOM } from "../../types/common";
 
 const HOME_ROUTES: RouterDOM[] = [
     {
         path: PATH.home,
-        element: <>home</>,
+        element: <Home />,
     },
     {
         path: PATH.test,
-        element: <>test</>,
+        element: <Test />,
     },
     {
         path: PATH.result,
-        element: <>result</>,
+        element: <Result />,
     },
     {
         path: PATH.menu,
-        element: <>menu</>,
+        element: <Menu />,
     },
 ];
 
