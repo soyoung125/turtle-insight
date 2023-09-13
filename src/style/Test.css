@@ -21,6 +21,8 @@
     border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.50);
 
+    cursor: pointer;
+
     font-family: 'Noto Sans KR';
     font-size: 12px;
     font-weight: 400;
@@ -44,9 +46,14 @@
 .option {
     background: rgba(255, 255, 255, 0.80);
     margin: 12px 0px;
+    cursor: pointer;
 }
 
 .option:active {
     background: rgba(251, 237, 189, 0.80);
     box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.18);
+}
+
+.divider {
+    margin: 18px 0px;
 }
