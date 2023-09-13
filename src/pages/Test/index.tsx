@@ -33,21 +33,6 @@ function Test() {
         }
     }
 
-    const calcResult = () => {
-        const types = Object.keys(test);
-        let mbti = '';
-        types.map((type) => {
-            const value = test[type];
-            const nestedType = Object.keys(value);
-            if (value[nestedType[0]] > value[nestedType[1]]) {
-                mbti += nestedType[0];
-            } else {
-                mbti += nestedType[1];
-            }
-        })
-        console.log(mbti);
-    }
-
     const question_box = QUESTIONS.map((q, idx) => (
         <div key={idx}>
             <div className="rounded_box white_border question">{q.question}</div>
