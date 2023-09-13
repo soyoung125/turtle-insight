@@ -1,9 +1,11 @@
 interface QuestionsType {
+	type: string,
 	questions: string[],
 	options: {[key: string]: string[]},
 }
 
 interface Question {
+	type: string,
 	question: string,
 	options: {
         type: string;
@@ -12,6 +14,7 @@ interface Question {
 }
 
 const MIND_QUESTIONS: QuestionsType = {
+	type: 'mind',
 	questions: [
 		"칵테일 파티에 초대받은 당신, 두 자리만 남았다면?",
 		"갑자기 같은 날 두 모임에 초대 받았다면, 어느 술자리에?",
@@ -38,6 +41,7 @@ const MIND_QUESTIONS: QuestionsType = {
 };
 
 const ENERGY_QUESTIONS: QuestionsType = {
+	type: 'energy',
 	questions: [
 		"둘 중에 한 바텐더에게 칵테일을 주문해야 한다면?",
 		"영화를 틀어주는 펍, 둘 중 하나의 영화를 골라야 한다면?",
@@ -64,6 +68,7 @@ const ENERGY_QUESTIONS: QuestionsType = {
 };
 
 const NATURE_QUESTIONS: QuestionsType = {
+	type: 'nature',
 	questions: [
 		"둘 중에 골라야 한다면 어떤 칵테일 바?",
 		"비싸보이는 칵테일 잔에 술을 먹던 당신, 마감 시간 직전에 실수로 떨어뜨렸다. 당신의 속마음은?",
@@ -90,6 +95,7 @@ const NATURE_QUESTIONS: QuestionsType = {
 };
 
 const TACTICS_QEUSTIONS: QuestionsType = {
+	type: 'tactics',
 	questions: [
 		"집에서 쉬고 있는데 갑자기 친한 친구가 펍으로 나오라 한다면?",
 		"칵테일 메뉴 중, 단 하나만을 주문해야 한다면?",
@@ -118,7 +124,7 @@ const TACTICS_QEUSTIONS: QuestionsType = {
 const questionFlatter = (obj: QuestionsType): Question[] => {
 	const {questions, options } = obj;
 	const types = Object.keys(options);
-	const result = questions.map((q, idx) => ({ question: q, options: types.map(t => ({type: t, answer: options[t][idx]}))}))
+	const result = questions.map((q, idx) => ({ type: obj.type, question: q, options: types.map(t => ({type: t, answer: options[t][idx]}))}))
 	return result;
 }
 
