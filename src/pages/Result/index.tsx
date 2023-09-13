@@ -1,6 +1,27 @@
+import { useEffect, useState } from 'react';
+import {
+    useRecoilValue, useRecoilState,
+} from 'recoil';
+import { testResultState } from '../../app/recoil/test';
+import { mbtiState } from '../../app/recoil/mbti';
+
 function Result() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [mbti, setMbti] = useRecoilState(mbtiState);
+    const getResultType = useRecoilValue(testResultState);
+
+    useEffect(() => {
+        if (mbti === '') {
+            setMbti(getResultType);
+        } else {
+            setIsLoading(false);
+        }
+    }, [mbti]);
+
     return (
-        <>result</>
+        <>
+            {isLoading ? <div>isloading</div> : <div>{mbti}</div>}
+        </>
     );
 }
 
