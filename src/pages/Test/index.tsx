@@ -7,7 +7,7 @@ function Test() {
         <div key={idx}>
             <div className="top">
                 <div className="question_number">Q{idx + 1}</div>
-                <div className="smallBtn">뒤로가기</div>
+                <div className="smallBtn" onClick={() => setStep(step - 1)}>뒤로가기</div>
             </div>
             <div className="rounded_box white_border question">{q.question}</div>
             <div>
