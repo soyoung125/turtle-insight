@@ -3,6 +3,10 @@ import { QUESTIONS } from "../../domain/constants/questions";
 import '../../style/Test.css'
 import { useNavigate } from "react-router-dom";
 import PATH from "../../domain/constants/path";
+import { testState } from "../../app/recoil/test";
+import {
+    useRecoilState,
+} from 'recoil';
 
 interface CustomJson {
     [key: string]: {[key: string] : number},
@@ -11,24 +15,7 @@ interface CustomJson {
 function Test() {
     const navigate = useNavigate();
     const [step, setStep] = useState(0);
-    const [result, setResult] = useState<CustomJson>({
-        mind: {
-            E: 0,
-            I: 0,
-        },
-        energy: {
-            S: 0,
-            N: 0,
-        },
-        nature: {
-            T: 0,
-            F: 0,
-        },
-        tactics: {
-            J: 0,
-            P: 0,
-        },
-    })
+    const [test, setTest] = useRecoilState(testState);
 
     const handleBack = () => {
         if(step > 0) {
@@ -37,21 +24,20 @@ function Test() {
     }
 
     const handleClick = (type: string, nestedType: string) => {
-        const value = result[type][nestedType];
-        setResult({...result, [type]: {...result[type], [nestedType]: value + 1}})
+        const value = test[type][nestedType];
+        setTest({...test, [type]: {...test[type], [nestedType]: value + 1}})
         if(step === 19) {
-            // navigate(PATH.result, {replace: true})
-            calcResult();
+            navigate(PATH.result, {replace: true})
         } else {
             setStep(step+1)
         }
     }
 
     const calcResult = () => {
-        const types = Object.keys(result);
+        const types = Object.keys(test);
         let mbti = '';
         types.map((type) => {
-            const value = result[type];
+            const value = test[type];
             const nestedType = Object.keys(value);
             if (value[nestedType[0]] > value[nestedType[1]]) {
                 mbti += nestedType[0];
@@ -59,6 +45,7 @@ function Test() {
                 mbti += nestedType[1];
             }
         })
+        console.log(mbti);
     }
 
     const question_box = QUESTIONS.map((q, idx) => (
