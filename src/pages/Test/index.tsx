@@ -40,10 +40,25 @@ function Test() {
         const value = result[type][nestedType];
         setResult({...result, [type]: {...result[type], [nestedType]: value + 1}})
         if(step === 19) {
-            navigate(PATH.result, {replace: true})
+            // navigate(PATH.result, {replace: true})
+            calcResult();
         } else {
             setStep(step+1)
         }
+    }
+
+    const calcResult = () => {
+        const types = Object.keys(result);
+        let mbti = '';
+        types.map((type) => {
+            const value = result[type];
+            const nestedType = Object.keys(value);
+            if (value[nestedType[0]] > value[nestedType[1]]) {
+                mbti += nestedType[0];
+            } else {
+                mbti += nestedType[1];
+            }
+        })
     }
 
     const question_box = QUESTIONS.map((q, idx) => (
