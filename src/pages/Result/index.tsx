@@ -12,7 +12,7 @@ function Result() {
 
     useEffect(() => {
         if (mbti === '') {
-            setMbti(getResultType);
+            setMbti(getResultType());
         } else {
             setIsLoading(false);
         }
