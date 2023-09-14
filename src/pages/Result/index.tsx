@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import {
-    useRecoilValue, useRecoilState,
+    useRecoilValue, useRecoilState, useResetRecoilState,
 } from 'recoil';
-import { testResultState } from '../../app/recoil/test';
+import { testResultState, testState } from '../../app/recoil/test';
 import { mbtiState } from '../../app/recoil/mbti';
 
 function Result() {
@@ -12,7 +12,7 @@ function Result() {
 
     useEffect(() => {
         if (mbti === '') {
-            setMbti(getResultType);
+            setMbti(getResultType());
         } else {
             setIsLoading(false);
         }

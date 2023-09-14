@@ -5,6 +5,7 @@ import PATH from '../../domain/constants/path';
 
 function Home() {
     const navigate = useNavigate();
+
     return (
         <>
             <div className="roundedCard">

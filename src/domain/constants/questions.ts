@@ -121,6 +121,8 @@ const TACTICS_QEUSTIONS: QuestionsType = {
 	},
 }
 
+const TYPES: {[key: string]: string[]} = { mind: ['E', 'I'], energy: ['S', 'N'], nature: ['T', 'F'], tactics: ['J', 'P']};
+
 const questionFlatter = (obj: QuestionsType): Question[] => {
 	const {questions, options } = obj;
 	const types = Object.keys(options);
@@ -137,5 +139,5 @@ const QUESTIONS: ReadonlyArray<Question> = [
 
 export default null;
 export {
-  QUESTIONS,
+  QUESTIONS, TYPES,
 };

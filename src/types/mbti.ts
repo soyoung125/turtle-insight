@@ -1,3 +1,3 @@
 export interface MbtiTest{
-    [key: string]: {[key: string] : number},
+    [key: string]: {[key: string] : string[]},
 }
