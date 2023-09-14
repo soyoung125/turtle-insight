@@ -1,17 +1,4 @@
-interface QuestionsType {
-	type: string,
-	questions: string[],
-	options: {[key: string]: string[]},
-}
-
-interface Question {
-	type: string,
-	question: string,
-	options: {
-        type: string;
-        answer: string;
-    }[],
-}
+import { Question, QuestionsType } from "../../types/mbti";
 
 const MIND_QUESTIONS: QuestionsType = {
 	type: 'mind',

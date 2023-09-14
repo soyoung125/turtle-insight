@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import {
-    useRecoilValue, useRecoilState, useResetRecoilState,
+    useRecoilValue, useRecoilState,
 } from 'recoil';
-import { testResultState, testState } from '../../app/recoil/test';
+import { testResultState } from '../../app/recoil/test';
 import { mbtiState } from '../../app/recoil/mbti';
 
 function Result() {
