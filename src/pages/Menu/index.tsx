@@ -1,6 +1,10 @@
+import menu from '../../assets/menu.png';
+
 function Menu() {
     return (
-        <>menu</>
+        <>
+            <img src={menu} className="logo_cocktail" alt="menu image" />
+        </>
     )
 }
 
