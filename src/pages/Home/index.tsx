@@ -1,4 +1,4 @@
-import cocktail from '../../assets/cocktail_white.png'
+import cocktail from '../../assets/images/cocktail_white.png'
 import '../../App.css'
 import { useNavigate } from 'react-router-dom';
 import PATH from '../../domain/constants/path';

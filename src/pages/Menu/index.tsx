@@ -1,4 +1,4 @@
-import menu from '../../assets/menu.png';
+import menu from '../../assets/images/menu.png';
 
 function Menu() {
     return (

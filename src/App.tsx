@@ -1,5 +1,5 @@
-import logo from '../src/assets/logo_white.png'
-import cocktail from '../src/assets/cocktail_white.png'
+import logo from '../src/assets/images/logo_white.png'
+import cocktail from '../src/assets/images/cocktail_white.png'
 import './App.css'
 
 function App() {
