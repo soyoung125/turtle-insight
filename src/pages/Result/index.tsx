@@ -5,12 +5,13 @@ import {
 import { testResultState } from '../../app/recoil/test';
 import { mbtiState } from '../../app/recoil/mbti';
 import '../../style/Result.css';
-import { COCKTAILS } from '../../domain/constants/cocktails';
+import { COCKTAILS, COCKTAIL_INFO } from '../../domain/constants/cocktails';
 
 function Result() {
     const [isLoading, setIsLoading] = useState(true);
     const [mbti, setMbti] = useRecoilState(mbtiState);
     const getResultType = useRecoilValue(testResultState);
+    const cocktail_info = COCKTAIL_INFO[mbti];
 
     useEffect(() => {
         if (mbti === '') {
@@ -26,27 +27,35 @@ function Result() {
                 ? <div>isloading</div>
                 : <div>
                     <div className='menu_top'>
-                        <img src={COCKTAILS[mbti]} className="main_cocktail" alt="turtleinsight logo" />
+                        <img src={COCKTAILS[mbti]} className="main_cocktail" alt="main cocktail" />
                         <div className="menu">BEST<br />MENU</div>
                     </div>
 
                     <div className='paper cocktail_info'>
-                        <div className='cocktail_name'>cocktail name</div>
-                        <div className='tag'><div className='tag_value'>tag</div></div>
-                        <div className='description'>content</div>
+                        <div className='cocktail_name'>{cocktail_info.name}</div>
+                        <div className='tags'>
+                            {cocktail_info.tags.map(t => <div className='tag_shape'><div className='tag_value'>{`#${t}`}</div></div>)}
+                        </div>
+                        <p className='description'>{cocktail_info.description}</p>
                     </div>
 
                     <div className='paper description'>
-                        <div>content</div>
+                        <b>나의 성격은?</b>
+                        <p>{cocktail_info.personality}</p>
+                    </div>
+
+                    <div className='paper description'>
+                        <b>나의 성격은?</b>
+                        <p>{cocktail_info.characteristic}</p>
                     </div>
 
                     <div className='recommendation'>
                         <div>
-                            cocktail img
+                            <img src={COCKTAILS[cocktail_info.good]} className="sub_cocktail" alt="best sub cocktail" />
                             <div>cocktail name</div>
                         </div>
                         <div>
-                            cocktail img
+                            <img src={COCKTAILS[cocktail_info.bad]} className="sub_cocktail" alt="worst sub cocktail" />
                             <div>cocktail name</div>
                         </div>
                     </div>
