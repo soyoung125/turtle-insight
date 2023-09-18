@@ -37,6 +37,18 @@ function Result() {
         navigate(`/result/${recommended_mbti}`);
     }
 
+    const handleShare = () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Turtle-insight',
+                text: 'MBTI별 칵테일 추천',
+                url: `https://turtleinsight.xyz/result/${mbti}`,
+            });
+        }else{
+            alert("공유하기가 지원되지 않는 환경 입니다.")
+        }
+      }
+
     return (
         <>
             {isLoading
@@ -96,7 +108,7 @@ function Result() {
                     </div>
 
                     <div className='floating_area'>
-                        <div className='floating_btn'>
+                        <div className='floating_btn' onClick={() => handleShare()}>
                             <span className="material-symbols-outlined">
                                 ios_share
                             </span>
