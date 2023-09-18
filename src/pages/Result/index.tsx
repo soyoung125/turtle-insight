@@ -20,10 +20,16 @@ function Result() {
     const cocktail_info = COCKTAIL_INFO[mbti];
 
     useEffect(() => {
-        if (testResult === '') {
-            setTestResult(getResultType());
-        } else {
+        const result = getResultType();
+
+        // if (result === '') {
+        //     return;
+        // }
+
+        if (result === testResult) {
             setIsLoading(false);
+        } else {
+            setTestResult(result);
         }
     }, [testResult]);
 
@@ -87,6 +93,19 @@ function Result() {
                         <div className='smallBtn' onClick={() => navigate(PATH.test)}>다시하기</div>
                         <div>출처 : https://namu.wiki/w</div>
                         <div>문의 및 광고 제안하기📬</div>
+                    </div>
+
+                    <div className='floating_area'>
+                        <div className='floating_btn'>
+                            <span className="material-symbols-outlined">
+                                ios_share
+                            </span>
+                        </div>
+                        <div className='floating_btn'>
+                            <span className="material-symbols-outlined">
+                                download
+                            </span>
+                        </div>
                     </div>
                 </div>}
         </>

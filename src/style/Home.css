@@ -8,6 +8,7 @@
 }
 
 .pink_background {
+    min-height: 100vh;
     background-image: url(/src/assets/images/backgrounds/background_pinkyellow.png);
     background-repeat: no-repeat;
     background-size: cover;
