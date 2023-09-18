@@ -77,7 +77,7 @@ const COCKTAIL_INFO: {[key: string]: MBTIINFO} = {
         characteristic: '술자리 재미있는 일 구경하러 감. 소수 선호하는데 좋아하는 사람들이어야 함. 2차 관심 없는 줄 알았는데 조용히 같이 감. 술자리에서 혼자 있는 시간 필요함.',
         good: 'ENTP',
         bad: 'ESFJ',
-        name_color: '#000',
+        name_color: '#642506',
         tag_color: '#FD7007'
     },
     ISTP: {
