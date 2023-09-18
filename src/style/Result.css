@@ -68,7 +68,7 @@
 }
 
 .recommendation {
-    display: flex;
+    display: flex ;
     padding: 8px 0px;
     flex-direction: row;
     justify-content: space-around;
@@ -109,4 +109,14 @@
 
     background-color: #FFF;
     border-radius: 200px;
+}
+
+.extra {
+    color: #FFF;
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+}
+
+.extra > * {
+    margin: 5px 0px;
 }

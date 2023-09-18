@@ -7,6 +7,7 @@ import { mbtiState } from '../../app/recoil/mbti';
 import '../../style/Result.css';
 import { COCKTAILS, COCKTAIL_INFO } from '../../domain/constants/cocktails';
 import { useNavigate, useParams } from 'react-router-dom';
+import PATH from '../../domain/constants/path';
 
 function Result() {
     const navigate = useNavigate();
@@ -80,6 +81,12 @@ function Result() {
                             <div className='sub_type'>BAD</div>
                             <div className="sub_cocktail_name">{COCKTAIL_INFO[cocktail_info.bad].name}</div>
                         </div>
+                    </div>
+
+                    <div className='extra'>
+                        <div className='smallBtn' onClick={() => navigate(PATH.test)}>다시하기</div>
+                        <div>출처 : https://namu.wiki/w</div>
+                        <div>문의 및 광고 제안하기📬</div>
                     </div>
                 </div>}
         </>
