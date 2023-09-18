@@ -50,13 +50,15 @@ function Result() {
                     </div>
 
                     <div className='recommendation'>
-                        <div>
-                            <img src={COCKTAILS[cocktail_info.good]} className="sub_cocktail" alt="best sub cocktail" />
-                            <div>cocktail name</div>
+                        <div className='sub_cocktail'>
+                            <img src={COCKTAILS[cocktail_info.good]} className="sub_cocktail_img" alt="best sub cocktail" />
+                            <div className='sub_type'>GOOD</div>
+                            <div className="sub_cocktail_name">{COCKTAIL_INFO[cocktail_info.good].name}</div>
                         </div>
-                        <div>
-                            <img src={COCKTAILS[cocktail_info.bad]} className="sub_cocktail" alt="worst sub cocktail" />
-                            <div>cocktail name</div>
+                        <div className='sub_cocktail'>
+                            <img src={COCKTAILS[cocktail_info.bad]} className="sub_cocktail_img" alt="worst sub cocktail" />
+                            <div className='sub_type'>BAD</div>
+                            <div className="sub_cocktail_name">{COCKTAIL_INFO[cocktail_info.bad].name}</div>
                         </div>
                     </div>
                 </div>}

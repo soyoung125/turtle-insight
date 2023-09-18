@@ -75,6 +75,24 @@
 }
 
 .sub_cocktail {
+    position: relative;
+    color: #351A02;
+
+    font-family: 'Black Han Sans';
+    margin-top: 1rem;
+}
+
+.sub_type {
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
+    transform: rotate(-45deg);
+}
+
+.sub_cocktail_img {
     max-width: 120px;
     width: 6rem;
+
+    background-color: #FFF;
+    border-radius: 200px;
 }
