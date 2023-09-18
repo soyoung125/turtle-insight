@@ -16,9 +16,9 @@ export interface Question {
 export interface MBTIINFO {
 	name: string,
 	tags: string[],
-	description: string[],
-	personality: string,
-	characteristic: string,
+	description: string,
+	personality: string[],
+	characteristic: string[],
 	good: string,
 	bad: string,
 	name_color: string,

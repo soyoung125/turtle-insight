@@ -48,13 +48,23 @@
 
 .description {
     font-family: 'NanumSquareNeoBold';
-    font-size: 10pt;
+    font-size: 12px;
     padding: 10px 30px;
+    color: black;
     text-align: justify;
 }
 
-.description > b {
-    font-family: 'NanumSquareNeoHeavy';
+.personality_info {
+    font-family: 'NanumSquareNeoBold';
+    font-size: 12px;
+    color: #FFF;
+    text-align: start;
+}
+
+.contents {
+    padding: 10px 30px;
+    color: black;
+    text-align: center;
 }
 
 .recommendation {

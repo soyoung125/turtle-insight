@@ -48,14 +48,24 @@ function Result() {
                         <p className='description'>{cocktail_info.description}</p>
                     </div>
 
-                    <div className='paper description'>
-                        <b>나의 성격은?</b>
-                        <p>{cocktail_info.personality}</p>
+                    <div className='personality_info'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="5" viewBox="0 0 4 5" fill="none">
+                            <circle cx="2" cy="2.5" r="2" fill="white" />
+                        </svg>
+                        {`  `}나의 성격은?
+                        <div className='paper contents'>
+                            <p>{cocktail_info.personality.map(p => <div>{p}</div>)}</p>
+                        </div>
                     </div>
 
-                    <div className='paper description'>
-                        <b>나는 술자리에서?</b>
-                        <p>{cocktail_info.characteristic}</p>
+                    <div className='personality_info'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="5" viewBox="0 0 4 5" fill="none">
+                            <circle cx="2" cy="2.5" r="2" fill="white" />
+                        </svg>
+                        {`  `}나는 술자리에서?
+                        <div className='paper contents'>
+                            <p>{cocktail_info.characteristic.map(c => <div>{c}</div>)}</p>
+                        </div>
                     </div>
 
                     <div className='recommendation'>
