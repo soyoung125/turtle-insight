@@ -4,10 +4,11 @@
 
 .menu {
     color: #FFF;
-    font-size: 60px;
+    font-size: 100px;
     font-weight: 400;
     font-family: 'SuperMagic';
-    line-height: 0.7;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.40);
+    line-height: 0.8;
 }
 
 .paper {
@@ -17,7 +18,7 @@
 }
 
 .cocktail_name {
-    font-size: 25pt;
+    font-size: 62px;
     font-style: normal;
     font-weight: 400;
     font-family: 'ClimateCrisisKR';
@@ -38,9 +39,11 @@
 }
 
 .tag_value {
+    display: inline-block;
+    margin: 0;
     transform: skew(20deg);
     font-family: 'Black Han Sans', sans-serif;
-    font-size: 10pt;
+    font-size: 16px;
 }
 
 .description {
@@ -62,16 +65,15 @@
 }
 
 .cocktail_info {
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: 55px;
+    padding-top: 55px;
 }
 
 .main_cocktail {
-    max-width: 256px;
-    width: 16rem;
+    width: 290px;
 
     position: absolute;
-    top: 0;
+    top: 55px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
