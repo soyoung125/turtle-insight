@@ -12,3 +12,15 @@ export interface Question {
         answer: string;
     }[],
 }
+
+export interface MBTIINFO {
+	name: string,
+	tags: string[],
+	description: string[],
+	personality: string,
+	characteristic: string,
+	good: string,
+	bad: string,
+	name_color: string,
+	tag_color: string,
+}

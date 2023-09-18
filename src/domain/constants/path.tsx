@@ -2,6 +2,7 @@ interface Path {
     readonly home: string;
     readonly test: string;
     readonly result: string;
+    readonly result_mbti: string;
     readonly menu: string;
   }
   
@@ -9,6 +10,7 @@ interface Path {
     home: '/',
     test: '/test',
     result: '/result',
+    result_mbti: '/result/:mbti_type',
     menu: '/menu',
   });
   
