@@ -32,9 +32,9 @@ function Result() {
                     </div>
 
                     <div className='paper cocktail_info'>
-                        <div className='cocktail_name'>{cocktail_info.name}</div>
+                        <div className='cocktail_name' style={{color: cocktail_info.name_color}}>{cocktail_info.name}</div>
                         <div className='tags'>
-                            {cocktail_info.tags.map(t => <div className='tag_shape'><div className='tag_value'>{`#${t}`}</div></div>)}
+                            {cocktail_info.tags.map(t => <div className='tag_shape'><div className='tag_value' style={{color: cocktail_info.tag_color}}>{`#${t}`}</div></div>)}
                         </div>
                         <p className='description'>{cocktail_info.description}</p>
                     </div>
