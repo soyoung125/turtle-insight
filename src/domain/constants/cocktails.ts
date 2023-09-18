@@ -20,7 +20,7 @@ const COCKTAILS: { [key: string]: string } = {
     ENFP: sex_on_the_beach,
     ESTJ: pousse_cafe,
     INTJ: espresso_martini,
-    INPT: aqua_vitae,
+    INTP: aqua_vitae,
     ISTP: lime_mojito,
     ESFJ: jungle_bird,
     ISFJ: long_island_iced_tea,
@@ -53,7 +53,7 @@ const COCKTAIL_INFO: {[key: string]: MBTIINFO} = {
         description: ['럼 베이스 칵테일의 한 종류로 알콜도수가 높은 칵테일입니다.', '보통 사람들이 알고 있는 칵테일 중에서는 알콜도수가 거의 최상위에 드는 칵테일입니다.', '술이 약하면 적당히 마시는 것이 좋습니다.', '맛은 럼의 강렬한 향을 크렘 드 카시스의 과일 향과 단 맛이 살짝 덮어주는 맛입니다.', '파우스트 한잔에 약 소주 4잔과 같은 양의 알코올이 들어 있습니다.'],
         personality: '계획적, 논리적, 현실적, 완벽주의임. 약속 시간 칼 같이 지키고, 늦는 사람들 이해 못함. 리더를 맡는 걸 좋아하는건 아닌데 맡기면 똑부러짐. 무언가를 미루는 것까지 계획을 짬. 상대방 파악 잘함. 겉으로는 공감하고 속으로는 팩트 체크함. 친한 사람들한테 잔소리 많이 함. “~하긴 한데 , “그래서 결론이 뭔데?” 라는 말 달고 삼.',
         characteristic: '술 한번 먹을 때 끝까지 먹음. 계속 술 빼는 거 못 참음. 내가 모르는 얘기 + 정신없는 분위기 기 빨림. 진지하고 현실적인 얘기함.',
-        good: 'ESPT',
+        good: 'ESTP',
         bad: 'INFP',
         name_color: '#560D04',
         tag_color: '#E27372'
@@ -69,7 +69,7 @@ const COCKTAIL_INFO: {[key: string]: MBTIINFO} = {
         name_color: '#3C2103',
         tag_color: '#B08C73'
     },
-    INPT: {
+    INTP: {
         name: '옥보단',
         tags: ['잔끝에설탕 ', '쿨피스맛 ', '5도'],
         description: ['대한민국 부산에서 만들어진 칵테일입니다.', '리큐르 베이스 칵테일로, 이름은 고전소설 및 영화로 잘 알려진 옥보단에서 가져왔다고 알려져 있습니다.', '잔 가장자리에 설탕을 묻혀두는데 잔 가장자리에 묻은 설탕을 혀로 핥아먹는 모습 때문에 야한 이름이 붙었습니다.', '하얀 백도복숭아 향이 나며, 코코넛 향, 꽃향기가 나는 달달한 열대과일맛 리큐르 기반 칵테일로, 술 맛이 거의 나지 않습니다.'],

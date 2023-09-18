@@ -19,6 +19,10 @@ const HOME_ROUTES: RouterDOM[] = [
         element: <Result />,
     },
     {
+        path: PATH.result_mbti,
+        element: <Result />,
+    },
+    {
         path: PATH.menu,
         element: <Menu />,
     },
