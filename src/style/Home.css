@@ -2,12 +2,22 @@
     width: 100vw;
     height: 100vh;
     word-break: keep-all;
-    background-image: url(/src/assets/images/backgrounds/background_blue.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     font-family: 'MaruBuri';
 
     overflow: scroll;
+}
+
+.pink_background {
+    background-image: url(/src/assets/images/backgrounds/background_pinkyellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blue_background {
+    height: 100vh;
+    background-image: url(/src/assets/images/backgrounds/background_blue.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
