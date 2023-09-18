@@ -24,8 +24,10 @@ export const testResultState = selector({
                 const var2 = data.filter((d) => d === TYPES[type][1])
                 if (var1.length > var2.length) {
                     mbti += var1[0];
-                } else {
+                } else if (var1.length < var2.length) {
                     mbti += var2[0];
+                } else {
+                    return '';
                 }
             })
             return mbti;

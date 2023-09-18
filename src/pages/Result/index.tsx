@@ -7,6 +7,7 @@ import { mbtiState } from '../../app/recoil/mbti';
 import '../../style/Result.css';
 import { COCKTAILS, COCKTAIL_INFO } from '../../domain/constants/cocktails';
 import { useNavigate, useParams } from 'react-router-dom';
+import PATH from '../../domain/constants/path';
 
 function Result() {
     const navigate = useNavigate();
@@ -19,16 +20,34 @@ function Result() {
     const cocktail_info = COCKTAIL_INFO[mbti];
 
     useEffect(() => {
-        if (testResult === '') {
-            setTestResult(getResultType());
-        } else {
+        const result = getResultType();
+
+        // if (result === '') {
+        //     return;
+        // }
+
+        if (result === testResult) {
             setIsLoading(false);
+        } else {
+            setTestResult(result);
         }
     }, [testResult]);
 
     const handleClickRecommend = (recommended_mbti: string) => {
         navigate(`/result/${recommended_mbti}`);
     }
+
+    const handleShare = () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Turtle-insight',
+                text: 'MBTI별 칵테일 추천',
+                url: `https://turtleinsight.xyz/result/${mbti}`,
+            });
+        }else{
+            alert("공유하기가 지원되지 않는 환경 입니다.")
+        }
+      }
 
     return (
         <>
@@ -42,20 +61,30 @@ function Result() {
 
                     <div className='paper cocktail_info'>
                         <div className='cocktail_name' style={{color: cocktail_info.name_color}}>{cocktail_info.name}</div>
-                        <div className='tags'>
-                            {cocktail_info.tags.map(t => <div className='tag_shape'><div className='tag_value' style={{color: cocktail_info.tag_color}}>{`#${t}`}</div></div>)}
+                        <div className='tag_shape'>
+                            {cocktail_info.tags.map(t => <p className='tag_value' style={{color: cocktail_info.tag_color}}> {`#${t}`} </p>)}
                         </div>
                         <p className='description'>{cocktail_info.description}</p>
                     </div>
 
-                    <div className='paper description'>
-                        <b>나의 성격은?</b>
-                        <p>{cocktail_info.personality}</p>
+                    <div className='personality_info'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="5" viewBox="0 0 4 5" fill="none">
+                            <circle cx="2" cy="2.5" r="2" fill="white" />
+                        </svg>
+                        {`  `}나의 성격은?
+                        <div className='paper contents'>
+                            <p>{cocktail_info.personality.map(p => <div>{p}</div>)}</p>
+                        </div>
                     </div>
 
-                    <div className='paper description'>
-                        <b>나는 술자리에서?</b>
-                        <p>{cocktail_info.characteristic}</p>
+                    <div className='personality_info'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="4" height="5" viewBox="0 0 4 5" fill="none">
+                            <circle cx="2" cy="2.5" r="2" fill="white" />
+                        </svg>
+                        {`  `}나는 술자리에서?
+                        <div className='paper contents'>
+                            <p>{cocktail_info.characteristic.map(c => <div>{c}</div>)}</p>
+                        </div>
                     </div>
 
                     <div className='recommendation'>
@@ -69,6 +98,25 @@ function Result() {
                             <img src={COCKTAILS[cocktail_info.bad]} className="sub_cocktail_img" alt="worst sub cocktail" />
                             <div className='sub_type'>BAD</div>
                             <div className="sub_cocktail_name">{COCKTAIL_INFO[cocktail_info.bad].name}</div>
+                        </div>
+                    </div>
+
+                    <div className='extra'>
+                        <div className='smallBtn' onClick={() => navigate(PATH.test)}>다시하기</div>
+                        <div>출처 : https://namu.wiki/w</div>
+                        <a href="mailto:insightturtle@gmail.com">문의 및 광고 제안하기📬</a>
+                    </div>
+
+                    <div className='floating_area'>
+                        <div className='floating_btn' onClick={() => handleShare()}>
+                            <span className="material-symbols-outlined">
+                                ios_share
+                            </span>
+                        </div>
+                        <div className='floating_btn'>
+                            <span className="material-symbols-outlined">
+                                download
+                            </span>
                         </div>
                     </div>
                 </div>}

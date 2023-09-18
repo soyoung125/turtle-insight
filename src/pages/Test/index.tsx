@@ -7,7 +7,6 @@ import { testState } from "../../app/recoil/test";
 import {
     useRecoilState, useResetRecoilState
 } from 'recoil';
-import { mbtiState } from "../../app/recoil/mbti";
 
 interface CustomJson {
     [key: string]: {[key: string] : number},
@@ -18,11 +17,9 @@ function Test() {
     const [step, setStep] = useState(0);
     const [test, setTest] = useRecoilState(testState);
     const resetTest = useResetRecoilState(testState);
-    const resetMBTI = useResetRecoilState(mbtiState);
 
     useEffect(() => {
         resetTest();
-        resetMBTI();
     }, []);
 
     const handleBack = () => {
