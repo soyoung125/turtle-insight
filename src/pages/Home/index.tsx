@@ -16,7 +16,7 @@ function Home() {
                     <div className='sub_title'>나와 어울리는 칵테일을 찾아보세요.</div>
                     <button className="start_button" onClick={() => navigate(PATH.test)}>start</button>
                     <button className="menu_button" onClick={() => navigate(PATH.menu)}>
-                        다른 칵테일 메뉴 보러가기
+                        칵테일 메뉴 보러가기
                     </button>
                 </div>
             </div>

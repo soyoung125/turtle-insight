@@ -19,8 +19,8 @@
   color: #223C6D;
   position: relative;
 
-  margin-top: calc((100dvh - 420px) / 2);
-  margin-bottom: calc((100dvh - 420px) / 2);
+  margin-top: calc((100dvh - 450px) / 2);
+  margin-bottom: calc((100dvh - 400px) / 2);
 }
 
 .title {
@@ -41,7 +41,7 @@
 }
 
 .sub_title {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 12px;
 }
 
