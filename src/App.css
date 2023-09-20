@@ -15,35 +15,51 @@
   padding: 1rem 2rem;
 }
 
-.title {
-  font-size: 24px;
-  color: #FFF;
+.blue_text {
+  color: #223C6D;
+  position: relative;
 }
-.title > div {
-  font-size: 18px;
+
+.center {
+  margin-top: calc((100vh - 400px) / 2);
+  margin-bottom: calc((100vh - 400px) / 2);
+}
+
+.title {
+  font-family: 'MaruBuriBold';
+  font-size: 24px;
 }
 
 .logo_cocktail {
-  max-width: 100%;
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.start_area {
+  margin-top: 120px;
+}
+
+.sub_title {
+  font-size: 16px;
+  margin-bottom: 12px;
 }
 
 .start_button {
-  width: 100%;
+  padding: 0px 13px;
   max-width: 255px;
-  border-radius: 10px;
-  background: #FAEFC9;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background: #FFF8DF;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
 
-  font-family: 'Aclonica';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 22px;
 }
 
 .menu_button {
-  width: 100%;
-  border-radius: 30px;
-  border: 5px solid #FFF;
-  background: rgba(255, 255, 255, 0.51);
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255, 248, 223, 0.60);
 }

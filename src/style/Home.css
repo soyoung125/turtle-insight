@@ -29,8 +29,6 @@
 }
 
 .logo {
-    padding: 1rem;
-    max-width: 70px;
-    min-width: 35px;
-    width: 10%;
+    padding: 12px;
+    width: 50px;
 }

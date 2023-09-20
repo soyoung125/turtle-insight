@@ -14,6 +14,7 @@ import jack_and_coke from '../../assets/images/cocktails/잭콕.gif'
 import gin_and_tonic from '../../assets/images/cocktails/진토닉.gif'
 import tequila_sunrise from '../../assets/images/cocktails/데낄라선라이즈.gif'
 import margarita from '../../assets/images/cocktails/마가리타.gif'
+import kahlua_milk from '../../assets/images/cocktails/깔루아밀크.gif'
 import { MBTIINFO } from '../../types/mbti'
 
 const COCKTAILS: { [key: string]: string } = {
@@ -33,6 +34,7 @@ const COCKTAILS: { [key: string]: string } = {
     ENTJ: gin_and_tonic,
     ISFP: tequila_sunrise,
     INFJ: margarita,
+    default: kahlua_milk,
 }
 
 const COCKTAIL_INFO: {[key: string]: MBTIINFO} = {
