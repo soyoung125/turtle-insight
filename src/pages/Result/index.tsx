@@ -42,7 +42,7 @@ function Result() {
             navigator.share({
                 title: 'Turtle-insight',
                 text: 'MBTI별 칵테일 추천',
-                url: `https://turtleinsight.xyz/result/${mbti}`,
+                url: `https://turtleinsight.xyz/result/${mbti}`
             });
         }else{
             alert("공유하기가 지원되지 않는 환경 입니다.")
