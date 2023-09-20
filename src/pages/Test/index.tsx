@@ -58,8 +58,6 @@ function Test() {
             </div>
 
             {question_box[step]}
-
-            <div>range: {step/20*100}%</div>
         </>
     );
 }
