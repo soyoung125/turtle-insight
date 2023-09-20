@@ -67,7 +67,7 @@
 }
 
 .center { 
-  height: calc(100vh - 92px);
+  height: calc(100vh - 152px);
   display: flex;
   align-items: center;
 }
