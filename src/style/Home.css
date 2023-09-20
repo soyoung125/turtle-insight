@@ -14,9 +14,9 @@
     background-size: cover;
 }
 
-.blue_background {
+.start_background {
     height: 100vh;
-    background-image: url(/src/assets/images/backgrounds/background_blue.jpg);
+    background-image: url(/src/assets/images/backgrounds/backgound_start.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
