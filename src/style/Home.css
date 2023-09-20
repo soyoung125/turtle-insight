@@ -1,6 +1,6 @@
 #root {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     word-break: keep-all;
     font-family: 'MaruBuri';
     color: black;
@@ -9,14 +9,14 @@
 }
 
 .pink_background {
-    min-height: 100vh;
+    min-height: 100dvh;
     background-image: url(/src/assets/images/backgrounds/background_pinkyellow.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .start_background {
-    height: 100vh;
+    height: 100dvh;
     background-image: url(/src/assets/images/backgrounds/backgound_start.jpg);
     background-repeat: no-repeat;
     background-size: cover;
