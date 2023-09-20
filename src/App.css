@@ -18,9 +18,7 @@
 .blue_text {
   color: #223C6D;
   position: relative;
-}
 
-.center {
   margin-top: calc((100vh - 400px) / 2);
   margin-bottom: calc((100vh - 400px) / 2);
 }
@@ -62,4 +60,14 @@
   padding: 4px 8px;
   border-radius: 8px;
   background: rgba(255, 248, 223, 0.60);
+}
+
+.cocktail_menu {
+  width: 100%;
+}
+
+.center { 
+  height: calc(100vh - 92px);
+  display: flex;
+  align-items: center;
 }
