@@ -8,7 +8,7 @@ function Home() {
 
     return (
         <>
-            <div className="blue_text center">
+            <div className="blue_text">
                 <div className="title">MBTI 밸런스 게임<div>-칵테일편-</div></div>
                 <img src={COCKTAILS.default} className="logo_cocktail" alt="cocktail logo" />
 
