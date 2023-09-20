@@ -51,14 +51,16 @@ function Test() {
     ))
 
     return (
-        <>
-            <div className="top">
-                <div className="question_number">Q{step + 1}</div>
-                <div className="smallBtn" onClick={handleBack}>뒤로가기</div>
-            </div>
+        <div className="center">
+            <div>
+                <div className="top">
+                    <div className="question_number">Q{step + 1}</div>
+                    <div className="smallBtn" onClick={handleBack}>뒤로가기</div>
+                </div>
 
-            {question_box[step]}
-        </>
+                {question_box[step]}
+            </div>
+        </div>
     );
 }
 
