@@ -19,8 +19,8 @@
   color: #223C6D;
   position: relative;
 
-  margin-top: calc((100vh - 400px) / 2);
-  margin-bottom: calc((100vh - 400px) / 2);
+  margin-top: calc((100dvh - 450px) / 2);
+  margin-bottom: calc((100dvh - 400px) / 2);
 }
 
 .title {
@@ -41,7 +41,7 @@
 }
 
 .sub_title {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 12px;
 }
 
@@ -51,11 +51,14 @@
   border-radius: 8px;
   background: #FFF8DF;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
 
   font-size: 22px;
 }
 
 .menu_button {
+  display: block;
+  margin: auto;
   font-size: 16px;
   padding: 4px 8px;
   border-radius: 8px;
@@ -67,7 +70,7 @@
 }
 
 .center { 
-  height: calc(100vh - 152px);
+  height: calc(100dvh - 152px);
   display: flex;
   align-items: center;
 }
