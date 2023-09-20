@@ -51,7 +51,7 @@ function Result() {
 
     return (
         <>
-            <link rel="preload" href="../../assets/images/bookmark.jpg" as="image" />
+            <link rel="preload" href="/src/assets/images/bookmark.jpg" as="image" />
             {isLoading
                 ? <div>isloading</div>
                 : <div>
