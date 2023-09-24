@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'SuperMagic';
-  src: url('assets/fonts/Super Magic.ttf') format('truetype');
+  src: url('/assets/fonts/Super Magic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'ClimateCrisisKR';
-  src: url('assets/fonts/ClimateCrisisKR-1979.ttf') format('truetype');
+  src: url('/assets/fonts/ClimateCrisisKR-1979.ttf') format('truetype');
 }
 
 
 .roundedCard {
   border-radius: 30px;
   border: 5px solid #FFF;
-  background: rgba(255, 255, 255, 0.51);
+  background: rgba(255, 255, 255,   0.51);
   padding: 1rem 2rem;
 }
 

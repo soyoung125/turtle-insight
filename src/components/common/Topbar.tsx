@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/images/logo_white.png'
+import logo from '/assets/images/logo_white.png'
 import PATH from '../../domain/constants/path';
 
 function Topbar() {
