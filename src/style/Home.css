@@ -17,7 +17,7 @@
 
 .start_background {
     height: 100dvh;
-    background-image: url(assets/images/backgrounds/backgound_start.jpg);
+    background-image: url(/assets/images/backgrounds/backgound_start.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
