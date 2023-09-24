@@ -22,15 +22,12 @@ function Result() {
     useEffect(() => {
         const result = getResultType();
 
-        // if (result === '') {
-        //     return;
-        // }
-
-        if (result === testResult) {
-            setIsLoading(false);
-        } else {
+        if (result !== '' && (result !== testResult)) {
             setTestResult(result);
-        }
+            setInterval(() => setIsLoading(false), 2000);
+        } else {
+            setIsLoading(false);
+        }  
     }, [testResult]);
 
     const handleClickRecommend = (recommended_mbti: string) => {

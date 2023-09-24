@@ -8,6 +8,12 @@
     overflow: scroll;
 }
 
+.loading {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
 .pink_background {
     min-height: 100dvh;
     background-image: url(/assets/images/backgrounds/background_pinkyellow.png);
