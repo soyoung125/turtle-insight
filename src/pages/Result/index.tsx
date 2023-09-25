@@ -36,7 +36,6 @@ function Result() {
     }
 
     const handleShare = () => {
-        document.querySelector('meta[property="og:url"]')?.setAttribute('content', `https://turtleinsight.xyz/result/${mbti}`);
         if (navigator.share) {
             navigator.share({
                 title: 'Turtle-insight',
@@ -50,6 +49,7 @@ function Result() {
 
     return (
         <>
+            <head><meta property="og:url" content={`https://turtleinsight.xyz/result/${mbti}`} /></head>
             {isLoading
                 ? <div>isloading</div>
                 : <div>
