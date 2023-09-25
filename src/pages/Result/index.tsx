@@ -8,6 +8,7 @@ import '../../style/Result.css';
 import { COCKTAILS, COCKTAIL_INFO } from '../../domain/constants/cocktails';
 import { useNavigate, useParams } from 'react-router-dom';
 import PATH from '../../domain/constants/path';
+import { RESULTS } from '../../domain/constants/results';
 
 function Result() {
     const navigate = useNavigate();
@@ -112,9 +113,11 @@ function Result() {
                             </span>
                         </div>
                         <div className='floating_btn'>
-                            <span className="material-symbols-outlined">
-                                download
-                            </span>
+                            <a href={RESULTS[mbti]} download>
+                                <span className="material-symbols-outlined">
+                                    download
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>}
