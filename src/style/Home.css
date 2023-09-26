@@ -26,6 +26,8 @@
     background-image: url(/assets/images/backgrounds/backgound_start.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    overflow: scroll;
 }
 
 .container {

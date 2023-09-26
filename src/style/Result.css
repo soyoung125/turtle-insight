@@ -125,6 +125,7 @@
     position: fixed;
     right: 20px;
     bottom: 10px;
+    z-index: 100;
 }
 
 .floating_btn {
