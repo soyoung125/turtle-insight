@@ -4,8 +4,6 @@
     word-break: keep-all;
     font-family: 'MaruBuri';
     color: black;
-
-    overflow: scroll;
 }
 
 .loading {
