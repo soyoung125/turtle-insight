@@ -9,6 +9,7 @@ import { COCKTAILS, COCKTAIL_INFO } from '../../domain/constants/cocktails';
 import { useNavigate, useParams } from 'react-router-dom';
 import PATH from '../../domain/constants/path';
 import { RESULTS } from '../../domain/constants/results';
+import KakaoAdFit from '../../components/common/KakaoAdFit';
 
 function Result() {
     const navigate = useNavigate();
@@ -28,7 +29,7 @@ function Result() {
             setInterval(() => setIsLoading(false), 2000);
         } else {
             setIsLoading(false);
-        }  
+        }
     }, [testResult]);
 
     const handleClickRecommend = (recommended_mbti: string) => {
@@ -42,14 +43,13 @@ function Result() {
                 text: 'MBTI별 칵테일 추천',
                 url: `https://turtleinsight.xyz/result/${mbti}`
             });
-        }else{
+        } else {
             alert("공유하기가 지원되지 않는 환경 입니다.")
         }
-      }
+    }
 
     return (
         <>
-            <head><meta property="og:url" content={`https://turtleinsight.xyz/result/${mbti}`} /></head>
             {isLoading
                 ? <div>isloading</div>
                 : <div>
@@ -59,9 +59,9 @@ function Result() {
                     </div>
 
                     <div className='paper cocktail_info'>
-                        <div className='cocktail_name' style={{color: cocktail_info.name_color}}>{cocktail_info.name}</div>
+                        <div className='cocktail_name' style={{ color: cocktail_info.name_color }}>{cocktail_info.name}</div>
                         <div className='tag_shape'>
-                            {cocktail_info.tags.map(t => <p className='tag_value' style={{color: cocktail_info.tag_color}}> {`#${t}`} </p>)}
+                            {cocktail_info.tags.map(t => <p className='tag_value' style={{ color: cocktail_info.tag_color }}> {`#${t}`} </p>)}
                         </div>
                         <p className='description'>{cocktail_info.description}</p>
                     </div>
@@ -103,7 +103,7 @@ function Result() {
                     <div className='extra'>
                         <div className='smallBtn' onClick={() => navigate(PATH.test)}>다시하기</div>
                         <div>출처 : https://namu.wiki/w</div>
-                        <a href="mailto:insightturtle@gmail.com">문의 및 광고 제안하기📬</a>
+                        <div><a href="mailto:insightturtle@gmail.com">문의 및 광고 제안하기📬</a></div>
                     </div>
 
                     <div className='floating_area'>
@@ -121,6 +121,7 @@ function Result() {
                         </div>
                     </div>
                 </div>}
+            <KakaoAdFit />
         </>
     );
 }

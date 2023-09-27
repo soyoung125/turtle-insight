@@ -1,5 +1,17 @@
 import { useEffect, useRef } from "react";
 
+interface Adfit {
+    display: (unit: string) => void;
+    destroy: (unit: string) => void;
+    refresh: (unit: string) => void;
+}
+
+declare global {
+    interface Window {
+        adfit?: Adfit;
+    }
+}
+
 function KakaoAdFit() {
     const adUnit = import.meta.env.VITE_AD_UNIT
     const scriptElementWrapper = useRef<HTMLInputElement | null>(null);
@@ -8,6 +20,11 @@ function KakaoAdFit() {
         const script = document.createElement("script");
         script.setAttribute("src", "https://t1.daumcdn.net/kas/static/ba.min.js");
         scriptElementWrapper.current?.appendChild(script);
+
+        return () => {
+            const globalAdfit = "adfit" in window ? window.adfit : null;
+            if (globalAdfit) globalAdfit.destroy(adUnit);
+        };
     }, [])
 
     return <div ref={scriptElementWrapper}>

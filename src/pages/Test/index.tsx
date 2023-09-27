@@ -7,9 +7,10 @@ import { testState } from "../../app/recoil/test";
 import {
     useRecoilState, useResetRecoilState
 } from 'recoil';
+import KakaoAdFit from "../../components/common/KakaoAdFit";
 
 interface CustomJson {
-    [key: string]: {[key: string] : number},
+    [key: string]: { [key: string]: number },
 }
 
 function Test() {
@@ -23,7 +24,7 @@ function Test() {
     }, []);
 
     const handleBack = () => {
-        if(step > 0) {
+        if (step > 0) {
             setStep(step - 1)
             setTest([...test.slice(0, -1)])
         }
@@ -31,10 +32,10 @@ function Test() {
 
     const handleClick = (nestedType: string) => {
         setTest([...test.concat(nestedType)])
-        if(step === 19) {
-            navigate(PATH.result, {replace: true})
+        if (step === 19) {
+            navigate(PATH.result, { replace: true })
         } else {
-            setStep(step+1)
+            setStep(step + 1)
         }
     }
 
@@ -51,16 +52,19 @@ function Test() {
     ))
 
     return (
-        <div className="center">
-            <div>
-                <div className="top">
-                    <div className="question_number">Q{step + 1}</div>
-                    <div className="smallBtn" onClick={handleBack}>뒤로가기</div>
-                </div>
+        <>
+            <div className="center">
+                <div>
+                    <div className="top">
+                        <div className="question_number">Q{step + 1}</div>
+                        <div className="smallBtn" onClick={handleBack}>뒤로가기</div>
+                    </div>
 
-                {question_box[step]}
+                    {question_box[step]}
+                </div>
             </div>
-        </div>
+            <KakaoAdFit />
+        </>
     );
 }
 
