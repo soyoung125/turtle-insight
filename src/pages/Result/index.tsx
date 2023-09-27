@@ -103,7 +103,7 @@ function Result() {
                     <div className='extra'>
                         <div className='smallBtn' onClick={() => navigate(PATH.test)}>다시하기</div>
                         <div>출처 : https://namu.wiki/w</div>
-                        <a href="mailto:insightturtle@gmail.com">문의 및 광고 제안하기📬</a>
+                        <div><a href="mailto:insightturtle@gmail.com">문의 및 광고 제안하기📬</a></div>
                     </div>
 
                     <div className='floating_area'>
