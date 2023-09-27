@@ -2,6 +2,7 @@ import '../../App.css'
 import { useNavigate } from 'react-router-dom';
 import PATH from '../../domain/constants/path';
 import { COCKTAILS } from '../../domain/constants/cocktails';
+import KakaoAdFit from '../../components/common/KakaoAdFit';
 
 function Home() {
     const navigate = useNavigate();
@@ -21,6 +22,7 @@ function Home() {
                 </div>
             </div>
             <div className='extra'><a href="mailto:insightturtle@gmail.com">문의 및 광고 제안하기📬</a></div>
+            <KakaoAdFit />
         </>
     );
 }
