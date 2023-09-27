@@ -14,7 +14,7 @@ function KakaoAdFit() {
         <ins className="kakao_ad_area" style={{ display: "none" }}
             data-ad-unit={adUnit}
             data-ad-width={320}
-            data-ad-height={50}></ins>
+            data-ad-height={100}></ins>
     </div>
 }
 
